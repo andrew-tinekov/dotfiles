@@ -69,5 +69,3 @@ Remove all symlinks created by stow:
 ```sh
 ./stow_remove.sh
 ```
-
-This only removes symlinks — no files are deleted.
