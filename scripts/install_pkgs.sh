@@ -47,7 +47,7 @@ case "$mode" in
     ensure_xcode_tools
     ensure_brew
     log "Installing packages via brew..."
-    brew install ripgrep stow tmux fish
+    brew install ripgrep stow tmux fish openssl@3 readline libyaml gmp autoconf
     success "brew packages installed"
     ;;
 
@@ -55,7 +55,7 @@ case "$mode" in
     log "Installing base dependencies via apt..."
     install_linux_base
     if [[ "$extras" == "--build-deps" ]]; then
-      install_ruby_build_deps
+      install_linux_ruby_build_deps
     fi
     success "apt packages installed"
     ;;
