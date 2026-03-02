@@ -2,6 +2,7 @@
 set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIGS_DIR="$DOTFILES_DIR/configs"
 SCRIPTS_DIR="$DOTFILES_DIR/scripts"
 
 source "$SCRIPTS_DIR/lib.sh"
@@ -13,26 +14,18 @@ usage() {
 
 stow_packages() {
   local skip_pattern="${1:-}"
-  local always_skip=("scripts" ".git")
 
   require_cmd stow
-  cd "$DOTFILES_DIR"
 
-  for pkg in */; do
-    pkg="${pkg%/}"
-
-    local skip=false
-    for s in "${always_skip[@]}"; do
-      [[ "$pkg" == "$s" ]] && skip=true && break
-    done
-    $skip && continue
+  for pkg in "$CONFIGS_DIR"/*/; do
+    pkg="$(basename "$pkg")"
 
     if [[ -n "$skip_pattern" && "$pkg" =~ ^($skip_pattern)$ ]]; then
       log "Skipping $pkg"
       continue
     fi
 
-    stow -R -t ~ "$pkg"
+    stow --dir="$CONFIGS_DIR" -R -t ~ "$pkg"
     success "stowed $pkg"
   done
 }
@@ -45,7 +38,7 @@ setup_ssh_dir() {
 
 setup_gitconfig_local() {
   local target="$HOME/.gitconfig.local"
-  local example="$DOTFILES_DIR/git/.gitconfig.local.example"
+  local example="$CONFIGS_DIR/git/.gitconfig.local.example"
 
   if [[ -f "$target" ]]; then
     success "~/.gitconfig.local already exists, skipping"

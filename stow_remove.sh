@@ -2,26 +2,17 @@
 set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIGS_DIR="$DOTFILES_DIR/configs"
 SCRIPTS_DIR="$DOTFILES_DIR/scripts"
 
 source "$SCRIPTS_DIR/lib.sh"
 
 require_cmd stow
-cd "$DOTFILES_DIR"
 
-always_skip=("scripts" ".git")
-
-for pkg in */; do
-  pkg="${pkg%/}"
-
-  skip=false
-  for s in "${always_skip[@]}"; do
-    [[ "$pkg" == "$s" ]] && skip=true && break
-  done
-  $skip && continue
-
-  stow -D -t ~ "$pkg"
-  success "unstowed $pkg"
+for pkg in "$CONFIGS_DIR"/*/; do
+  pkg="$(basename "$pkg")"
+  stow --dir="$CONFIGS_DIR" -D -t ~ "$pkg"
+  success "unlinked $pkg"
 done
 
 success "All symlinks unlinked"
