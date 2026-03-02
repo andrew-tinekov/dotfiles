@@ -1,0 +1,9 @@
+.DS_Store
+
+fish/.config/fish/fish_variables
+git/.gitconfig.local
+
+ssh/.ssh/id_*
+ssh/.ssh/authorized_keys
+ssh/.ssh/config.local
+ssh/.ssh/known_hosts*

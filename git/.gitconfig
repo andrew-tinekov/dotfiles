@@ -1,0 +1,14 @@
+[core]
+    excludesFile = ~/.gitignore
+[init]
+    defaultBranch = main
+[color]
+    ui = true
+[commit]
+    gpgsign = true
+[gpg]
+    format = ssh
+[user]
+    signingKey = ~/.ssh/id_ed25519_git.pub
+[include]
+    path = ~/.gitconfig.local

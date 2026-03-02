@@ -1,0 +1,4 @@
+font-size = 16
+font-feature = -calt
+theme = "light:TokyoNight Day,dark:TokyoNight Storm"
+window-padding-balance = true
