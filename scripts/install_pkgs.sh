@@ -30,7 +30,7 @@ ensure_brew() {
 
 install_linux_base() {
   run_as_root apt-get update -qq
-  run_as_root apt-get install -y curl git ripgrep stow tmux fish
+  run_as_root apt-get install -y curl git ripgrep stow tmux unzip fish
 }
 
 install_ruby_build_deps() {
