@@ -56,7 +56,7 @@ Minimal setup — skips `ssh`, `ghostty`, `zsh`, and full mise config. Only neov
 
 ## Post-install
 
-`bootstrap.sh` creates `~/.gitconfig.local` from the template — edit it with your data:
+`bootstrap.sh` creates `~/.gitconfig.local` from the template — add your name and email:
 
 ```sh
 nvim ~/.gitconfig.local

@@ -46,7 +46,7 @@ setup_gitconfig_local() {
   fi
 
   cp "$example" "$target"
-  log "Created ~/.gitconfig.local from example — edit it with your name and email"
+  log "Created ~/.gitconfig.local — add your name and email"
 }
 
 install_mise_tools() {
