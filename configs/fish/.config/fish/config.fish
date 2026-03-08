@@ -1,6 +1,6 @@
 set fish_greeting
 
-set -gx EDITOR nvim
+set -gx EDITOR hx
 
 if test (uname) = Darwin
     brew shellenv | source
