@@ -1,6 +1,7 @@
 .DS_Store
 
 configs/fish/.config/fish/fish_variables
+configs/fish/.config/fish/completions
 configs/git/.gitconfig.local
 
 configs/ssh/.ssh/id_*
