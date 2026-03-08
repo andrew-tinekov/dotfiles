@@ -4,6 +4,7 @@ go = "latest"
 node = "22"
 python = "3.13"
 rust = "latest"
+helix = { version = "25.07.1", symlink_bins = true }
 
 [settings]
 idiomatic_version_file_enable_tools = [ "go", "node", "python" ]
