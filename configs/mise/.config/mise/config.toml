@@ -3,9 +3,8 @@ bun = "latest"
 go = "latest"
 node = "22"
 python = "3.13"
-ruby = "3.4"
 rust = "latest"
 
 [settings]
-idiomatic_version_file_enable_tools = [ "go", "node", "python", "ruby"]
+idiomatic_version_file_enable_tools = [ "go", "node", "python" ]
 
