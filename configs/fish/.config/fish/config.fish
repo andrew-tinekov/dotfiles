@@ -1,5 +1,6 @@
 set fish_greeting
 
+set -gx RIPGREP_CONFIG_PATH ~/.config/ripgrep/.ripgreprc
 set -gx EDITOR hx
 
 if test (uname) = Darwin
