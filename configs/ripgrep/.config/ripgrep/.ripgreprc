@@ -3,4 +3,3 @@
 
 --glob=!.git/*
 --glob=!node_modules/*
-
