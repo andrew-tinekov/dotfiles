@@ -216,7 +216,18 @@ end)
 -- - `:h MiniFiles-examples` - examples of common setups
 now_if_args(function()
   -- Enable directory/file preview
-  require('mini.files').setup({ windows = { preview = true } })
+  require('mini.files').setup({
+    windows = {
+      -- Maximum number of windows to show side by side
+      max_number = 2,
+      -- Whether to show preview of file/directory under cursor
+      preview = true,
+      -- Width of focused window
+      width_focus = 40,
+      -- Width of preview window
+      width_preview = 80,
+    },
+  })
 
   -- Add common bookmarks for every explorer. Example usage inside explorer:
   -- - `'c` to navigate into your config directory
