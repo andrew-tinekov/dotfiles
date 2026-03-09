@@ -1,10 +1,13 @@
 return {
+  ["codediff.nvim"] = "d21a9a3ec5b46c92b38f4ad2e950b76b152151d5",
   ["conform.nvim"] = "40dcec5555f960b0a04340d76eabdf4efe78599d",
   ["friendly-snippets"] = "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
   ["mason.nvim"] = "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
   ["mini.nvim"] = "9d359222b3643f1fccbd8f3180445842e1cae00b",
-  ["nvim-lspconfig"] = "faa403f95fd82cc24ebd0cee6af41b0de2dae00c",
+  neogit = "8fd90675caf8b847280ca56f464b66030adad876",
+  ["nvim-lspconfig"] = "d8bf4c47385340ab2029402201d4d7c9f99f437a",
   ["nvim-treesitter"] = "5cb05e1b0fa3c469958a2b26f36b3fe930af221c",
   ["nvim-treesitter-textobjects"] = "4e91b5d0394329a229725b021a8ea217099826ef",
+  ["plenary.nvim"] = "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
   ["tokyonight.nvim"] = "5da1b76e64daf4c5d410f06bcb6b9cb640da7dfd"
 }
